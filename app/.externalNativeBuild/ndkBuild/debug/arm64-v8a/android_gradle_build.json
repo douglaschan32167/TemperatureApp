@@ -1,0 +1,10 @@
+{
+  "buildFiles": [
+    "/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/jni/Android.mk"
+  ],
+  "cleanCommands": [],
+  "libraries": {},
+  "toolchains": {},
+  "cFileExtensions": [],
+  "cppFileExtensions": []
+}

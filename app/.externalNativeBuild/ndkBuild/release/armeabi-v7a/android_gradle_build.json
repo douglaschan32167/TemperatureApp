@@ -1,0 +1,32 @@
+{
+  "buildFiles": [
+    "/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/jni/Android.mk"
+  ],
+  "cleanCommands": [
+    "/home/douglas/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/jni/Android.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDEBUG\u003d0 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/.externalNativeBuild/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/release/lib clean"
+  ],
+  "libraries": {
+    "jniTempConverter-release-armeabi-v7a": {
+      "buildCommand": "/home/douglas/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/jni/Android.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDEBUG\u003d0 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/.externalNativeBuild/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/release/lib /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/.externalNativeBuild/ndkBuild/release/obj/local/armeabi-v7a/libjniTempConverter.so",
+      "toolchain": "toolchain-armeabi-v7a",
+      "abi": "armeabi-v7a",
+      "artifactName": "jniTempConverter",
+      "files": [
+        {
+          "src": "/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/jni/jniTempConverter.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-no-canonical-prefixes\" \"-g\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-DNDEBUG\" \"-I/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/douglas/Android/Sdk/ndk-bundle/platforms/android-21/arch-arm/usr/include\""
+        }
+      ],
+      "output": "/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/.externalNativeBuild/ndkBuild/release/obj/local/armeabi-v7a/libjniTempConverter.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-armeabi-v7a": {
+      "cCompilerExecutable": "/home/douglas/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

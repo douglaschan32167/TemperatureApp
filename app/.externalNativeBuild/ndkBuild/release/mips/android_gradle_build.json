@@ -1,0 +1,32 @@
+{
+  "buildFiles": [
+    "/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/jni/Android.mk"
+  ],
+  "cleanCommands": [
+    "/home/douglas/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/jni/Android.mk APP_ABI\u003dmips NDK_ALL_ABIS\u003dmips NDEBUG\u003d0 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/.externalNativeBuild/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/release/lib clean"
+  ],
+  "libraries": {
+    "jniTempConverter-release-mips": {
+      "buildCommand": "/home/douglas/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/jni/Android.mk APP_ABI\u003dmips NDK_ALL_ABIS\u003dmips NDEBUG\u003d0 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/.externalNativeBuild/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/release/lib /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/.externalNativeBuild/ndkBuild/release/obj/local/mips/libjniTempConverter.so",
+      "toolchain": "toolchain-mips",
+      "abi": "mips",
+      "artifactName": "jniTempConverter",
+      "files": [
+        {
+          "src": "/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/jni/jniTempConverter.c",
+          "flags": "\"-fpic\" \"-finline-functions\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector-strong\" \"-fmessage-length\u003d0\" \"-fno-inline-functions-called-once\" \"-fgcse-after-reload\" \"-frerun-cse-after-loop\" \"-frename-registers\" \"-no-canonical-prefixes\" \"-g\" \"-O2\" \"-DNDEBUG\" \"-I/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/douglas/Android/Sdk/ndk-bundle/platforms/android-21/arch-mips/usr/include\""
+        }
+      ],
+      "output": "/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/.externalNativeBuild/ndkBuild/release/obj/local/mips/libjniTempConverter.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-mips": {
+      "cCompilerExecutable": "/home/douglas/Android/Sdk/ndk-bundle/toolchains/mipsel-linux-android-4.9/prebuilt/linux-x86_64/bin/mipsel-linux-android-gcc"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

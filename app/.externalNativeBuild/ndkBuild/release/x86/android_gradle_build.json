@@ -1,0 +1,32 @@
+{
+  "buildFiles": [
+    "/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/jni/Android.mk"
+  ],
+  "cleanCommands": [
+    "/home/douglas/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/jni/Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDEBUG\u003d0 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/.externalNativeBuild/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/release/lib clean"
+  ],
+  "libraries": {
+    "jniTempConverter-release-x86": {
+      "buildCommand": "/home/douglas/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/jni/Android.mk APP_ABI\u003dx86 NDK_ALL_ABIS\u003dx86 NDEBUG\u003d0 APP_PLATFORM\u003dandroid-21 NDK_OUT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/.externalNativeBuild/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/release/lib /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/.externalNativeBuild/ndkBuild/release/obj/local/x86/libjniTempConverter.so",
+      "toolchain": "toolchain-x86",
+      "abi": "x86",
+      "artifactName": "jniTempConverter",
+      "files": [
+        {
+          "src": "/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/jni/jniTempConverter.c",
+          "flags": "\"-ffunction-sections\" \"-funwind-tables\" \"-no-canonical-prefixes\" \"-g\" \"-fstack-protector-strong\" \"-O2\" \"-DNDEBUG\" \"-I/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-isystem\" \"/home/douglas/Android/Sdk/ndk-bundle/platforms/android-21/arch-x86/usr/include\""
+        }
+      ],
+      "output": "/home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/.externalNativeBuild/ndkBuild/release/obj/local/x86/libjniTempConverter.so"
+    }
+  },
+  "toolchains": {
+    "toolchain-x86": {
+      "cCompilerExecutable": "/home/douglas/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64/bin/i686-linux-android-gcc"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

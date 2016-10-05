@@ -1,6 +1,10 @@
+//
+// Created by douglas on 10/5/16.
+//
+
 #include <jni.h>
 #include <stdio.h>
-#include "/home/douglas/Documents/grad school/jobsearch/qualcomm/TemperatureApp/app/src/main/java/include/com_example_douglas_temperatureapp_JNITempConverter.h"
+#include "com_example_douglas_temperatureapp_JNITempConverter.h"
 
 JNIEXPORT jfloatArray JNICALL Java_com_example_douglas_temperatureapp_JNITempConverter_convertCToF
   (JNIEnv *env, jobject thisobj, jfloatArray inJNIArray) {

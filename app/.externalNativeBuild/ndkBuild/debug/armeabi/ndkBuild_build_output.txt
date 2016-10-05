@@ -1,0 +1,7 @@
+rm -f /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/armeabi/lib*.so
+rm -f /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/armeabi/gdbserver
+rm -f /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/armeabi/gdb.setup
+mkdir -p /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/armeabi
+echo [armeabi] "Install        ": "libjniTempConverter.so => /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/armeabi/libjniTempConverter.so"
+install -p /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/.externalNativeBuild/ndkBuild/debug/obj/local/armeabi/libjniTempConverter.so /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/armeabi/libjniTempConverter.so
+/home/douglas/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.9/prebuilt/linux-x86_64/bin/arm-linux-androideabi-strip --strip-unneeded  /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/armeabi/libjniTempConverter.so

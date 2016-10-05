@@ -1,0 +1,7 @@
+rm -f /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/x86/lib*.so
+rm -f /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/x86/gdbserver
+rm -f /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/x86/gdb.setup
+mkdir -p /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/x86
+echo [x86] "Install        ": "libjniTempConverter.so => /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/x86/libjniTempConverter.so"
+install -p /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/.externalNativeBuild/ndkBuild/debug/obj/local/x86/libjniTempConverter.so /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/x86/libjniTempConverter.so
+/home/douglas/Android/Sdk/ndk-bundle/toolchains/x86-4.9/prebuilt/linux-x86_64/bin/i686-linux-android-strip --strip-unneeded  /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/x86/libjniTempConverter.so

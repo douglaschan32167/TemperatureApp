@@ -1,0 +1,7 @@
+rm -f /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/mips64/lib*.so
+rm -f /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/mips64/gdbserver
+rm -f /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/mips64/gdb.setup
+mkdir -p /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/mips64
+echo [mips64] "Install        ": "libjniTempConverter.so => /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/mips64/libjniTempConverter.so"
+install -p /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/.externalNativeBuild/ndkBuild/debug/obj/local/mips64/libjniTempConverter.so /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/mips64/libjniTempConverter.so
+/home/douglas/Android/Sdk/ndk-bundle/toolchains/mips64el-linux-android-4.9/prebuilt/linux-x86_64/bin/mips64el-linux-android-strip --strip-unneeded  /home/douglas/Documents/codeChallenge/qualcomm/temperatureApp/TemperatureApp/app/build/intermediates/ndkBuild/debug/lib/mips64/libjniTempConverter.so
