@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         if (ambientTempSensor == null) {
             testView.setText("There is no ambient temp sensor");
         } else {
-            testView.setText("The temps are " + tempGen.getTemperatures().toString());
+            testView.setText("The temps are " + tempGen.getTemperaturesC().toString() + "which in Fahr is " + tempGen.getTemperaturesF().toString());
         }
         ambientTempView = (TextView)findViewById(R.id.ambientTemperatureView);
 
