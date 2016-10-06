@@ -41,6 +41,17 @@ public class TemperatureGenerator {
     }
 
     /**
+     * A function to convert one celsius temperature to fahrenheit.
+     * @param cTemp The temperature in celsius, a float.
+     * @return A Float with the value of the converted fahrenheit temperature.
+     */
+    public Float convertTemperatureCToF(Float cTemp){
+        float[] cTempArray = {cTemp.floatValue()};
+        float[] resultArray = this.tempConverter.convertCToF(cTempArray);
+        return Float.valueOf(resultArray[0]);
+    }
+
+    /**
      *Accessor function for celsius temperatures.
      */
     public List<Float> getTemperaturesC() {

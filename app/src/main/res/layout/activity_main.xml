@@ -19,15 +19,6 @@
         android:onClick="toggleTemperatureTypes"
         android:id="@+id/degreesToggleButton" />
 
-    <TextView
-        android:id="@+id/testTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="This text should not show"
-        android:layout_marginTop="51dp"
-        android:layout_below="@+id/ambientTemperatureView"
-        android:layout_alignParentStart="true" />
-
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"

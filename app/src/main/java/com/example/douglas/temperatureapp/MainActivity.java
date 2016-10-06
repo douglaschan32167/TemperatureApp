@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private Sensor ambientTempSensor;
     private String degreeType;
     private TemperatureGenerator tempGen;
-    private TextView ambientTempView, testView, degreesTypeView;
+    private TextView ambientTempView, degreesTypeView;
     private TextView mondayDegrees, tuesdayDegrees, wednesdayDegrees, thursdayDegrees, fridayDegrees;
 
     private float ambientTemp;
@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         this.sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         this.ambientTempSensor = sensorManager.getDefaultSensor(Sensor.TYPE_TEMPERATURE);
         this.degreeType = "Celsius";
@@ -35,7 +34,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         setContentView(R.layout.activity_main);
         this.tempGen = new TemperatureGenerator();
         this.toggleDegreesButton = (Button)findViewById(R.id.degreesToggleButton);
-        this.testView = (TextView)findViewById(R.id.testTextView);
         this.degreesTypeView = (TextView) findViewById(R.id.degreesType);
         this.mondayDegrees = (TextView) findViewById(R.id.mondayDegrees);
         this.tuesdayDegrees = (TextView) findViewById(R.id.tuesdayDegrees);
@@ -43,16 +41,8 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         this.thursdayDegrees = (TextView) findViewById(R.id.thursdayDegrees);
         this.fridayDegrees = (TextView) findViewById(R.id.fridayDegrees);
 
-
-        if (ambientTempSensor == null) {
-            this.testView.setText("There is no ambient temp sensor");
-        } else {
-            this.testView.setText("The temps are " + this.tempGen.getTemperaturesC().toString() + "which in Fahr is " + this.tempGen.getTemperaturesF().toString());
-        }
-        showTemperatures();
-
-
         this.ambientTempView = (TextView)findViewById(R.id.ambientTemperatureView);
+        showTemperatures();
 
     }
 
@@ -83,8 +73,27 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         this.thursdayDegrees.setText(String.valueOf(temps.get(3)));
         this.fridayDegrees.setText(String.valueOf(temps.get(4)));
         this.degreesTypeView.setText("Degrees " + this.degreeType);
+
+        String ambientTempInfo = "The ambient temp is " + String.valueOf(getAmbientTemp()) + " " + this.degreeType;
+        this.ambientTempView.setText(ambientTempInfo);
     }
 
+    /**
+     * A function consolidating the degree type checks when determining the ambient temperature.
+     * @return The ambient temperature in whichever degree type is selected.
+     */
+    public Float getAmbientTemp() {
+        if (this.degreeType.equals("Celsius")) {
+            return this.ambientTemp;
+        } else {
+            return this.tempGen.convertTemperatureCToF(this.ambientTemp);
+        }
+    }
+
+    /**
+     * Change the degrees used in the temperatures and refresh the values shown.
+     * @param view
+     */
     public void toggleTemperatureTypes(View view) {
         if (this.degreeType.equals("Celsius")) {
             this.degreeType = "Fahrenheit";
@@ -98,9 +107,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     }
 
     public void onSensorChanged(SensorEvent event) {
-        ambientTemp = event.values[0];
-        String ambientTempInfo = "The ambient temp is " + String.valueOf(ambientTemp);
-        ambientTempView.setText(ambientTempInfo);
+        this.ambientTemp = event.values[0];
+
+        String ambientTempInfo = "The ambient temp is " + String.valueOf(getAmbientTemp()) + " " + this.degreeType;
+        this.ambientTempView.setText(ambientTempInfo);
 
     }
 }
