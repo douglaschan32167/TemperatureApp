@@ -8,23 +8,23 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/phonebackgroundspace"
     tools:context="com.example.douglas.temperatureapp.MainActivity">
 
     <Button
-        android:text="Button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/degreesToggleButton"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:onClick="toggleTemperatureTypes"
-        android:id="@+id/degreesToggleButton" />
+        android:text="Button"/>
 
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="51dp"
-        android:layout_below="@+id/testTextView"
         android:layout_alignStart="@+id/ambientTemperatureView">
 
         <TableLayout
@@ -39,14 +39,12 @@
 
             <TableRow>
                 <TextView
-                    android:layout_column="1"
-                    android:text="Day"
-                    android:padding="3dip" />
+                    style="@style/DayRowText"
+                    android:text="Day" />
                 <TextView
+                    style="@style/DayTempText"
                     android:id="@+id/degreesType"
-                    android:text="Degrees Celsius"
-                    android:gravity="right"
-                    android:padding="3dip" />
+                    android:text="Degrees Celsius" />
             </TableRow>
 
             <View
@@ -55,14 +53,12 @@
 
             <TableRow>
                 <TextView
-                    android:layout_column="1"
-                    android:text="Monday"
-                    android:padding="3dip" />
+                    style="@style/DayRowText"
+                    android:text="Monday" />
                 <TextView
+                    style="@style/DayTempText"
                     android:id="@+id/mondayDegrees"
-                    android:text="Monday Degrees"
-                    android:gravity="right"
-                    android:padding="3dip" />
+                    android:text="Monday Degrees" />
             </TableRow>
 
             <View
@@ -71,14 +67,12 @@
 
             <TableRow>
                 <TextView
-                    android:layout_column="1"
-                    android:text="Tuesday"
-                    android:padding="3dip" />
+                    style="@style/DayRowText"
+                    android:text="Tuesday" />
                 <TextView
+                    style="@style/DayTempText"
                     android:id="@+id/tuesdayDegrees"
-                    android:text="Tuesday degrees"
-                    android:gravity="right"
-                    android:padding="3dip" />
+                    android:text="Tuesday degrees" />
             </TableRow>
 
             <View
@@ -87,14 +81,12 @@
 
             <TableRow>
                 <TextView
-                    android:layout_column="1"
-                    android:text="Wednesday"
-                    android:padding="3dip" />
+                    style="@style/DayRowText"
+                    android:text="Wednesday" />
                 <TextView
+                    style="@style/DayTempText"
                     android:id="@+id/wednesdayDegrees"
-                    android:text="Wednesday Degrees"
-                    android:gravity="right"
-                    android:padding="3dip" />
+                    android:text="Wednesday Degrees" />
             </TableRow>
 
             <View
@@ -103,30 +95,26 @@
 
             <TableRow>
                 <TextView
-                    android:text="Thursday"
-                    android:layout_column="1"
-                    android:padding="3dip" />
+                    style="@style/DayRowText"
+                    android:text="Thursday"/>
                 <TextView
+                    style="@style/DayTempText"
                     android:id="@+id/thursdayDegrees"
-                    android:text="Thursday Degrees"
-                    android:gravity="right"
-                    android:padding="3dip" />
+                    android:text="Thursday Degrees" />
             </TableRow>
 
             <View
-                android:layout_height="2dip"
-                android:background="#FF909090" />
+                android:background="#FF909090"
+                android:layout_height="2dip" />
 
             <TableRow>
                 <TextView
-                    android:text="Friday"
-                    android:layout_column="1"
-                    android:padding="3dip" />
+                    style="@style/DayRowText"
+                    android:text="Friday"/>
                 <TextView
+                    style="@style/DayTempText"
                     android:id="@+id/fridayDegrees"
-                    android:text="Friday Degrees"
-                    android:gravity="right"
-                    android:padding="3dip" />
+                    android:text="Friday Degrees" />
             </TableRow>
 
             <View
@@ -138,9 +126,10 @@
     </LinearLayout>
 
     <TextView
-        android:text="Waiting for ambient temperater sensor"
+        android:id="@+id/ambientTemperatureView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/ambientTemperatureView" />
+        android:text="Waiting for ambient temperater sensor"
+        android:textColor="@color/white" />
 
 </RelativeLayout>

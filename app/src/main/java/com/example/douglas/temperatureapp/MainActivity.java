@@ -67,14 +67,15 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         }
 
 
-        this.mondayDegrees.setText(String.valueOf(temps.get(0)));
-        this.tuesdayDegrees.setText(String.valueOf(temps.get(1)));
-        this.wednesdayDegrees.setText(String.valueOf(temps.get(2)));
-        this.thursdayDegrees.setText(String.valueOf(temps.get(3)));
-        this.fridayDegrees.setText(String.valueOf(temps.get(4)));
-        this.degreesTypeView.setText("Degrees " + this.degreeType);
+        //usually weather apps round to either whole numbers or 1 decimal
+        this.mondayDegrees.setText(String.format("%6.1f", temps.get(0)));
+        this.tuesdayDegrees.setText(String.format("%6.1f", temps.get(1)));
+        this.wednesdayDegrees.setText(String.format("%6.1f", temps.get(2)));
+        this.thursdayDegrees.setText(String.format("%6.1f", temps.get(3)));
+        this.fridayDegrees.setText(String.format("%6.1f", temps.get(4)));
+        this.degreesTypeView.setText((char) 0x00B0  + this.degreeType);
 
-        String ambientTempInfo = "The ambient temp is " + String.valueOf(getAmbientTemp()) + " " + this.degreeType;
+        String ambientTempInfo = "The ambient temp is " + String.format("%6.1f", getAmbientTemp()) + (char) 0x00B0  + this.degreeType;
         this.ambientTempView.setText(ambientTempInfo);
     }
 
@@ -109,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     public void onSensorChanged(SensorEvent event) {
         this.ambientTemp = event.values[0];
 
-        String ambientTempInfo = "The ambient temp is " + String.valueOf(getAmbientTemp()) + " " + this.degreeType;
+        String ambientTempInfo = "The ambient temp is " + String.format("%6.1f", getAmbientTemp()) + (char) 0x00B0  + this.degreeType;
         this.ambientTempView.setText(ambientTempInfo);
 
     }
