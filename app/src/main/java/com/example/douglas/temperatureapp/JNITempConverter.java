@@ -11,6 +11,11 @@ public class JNITempConverter {
         System.loadLibrary("jniTempConverter");
     }
 
+    /**
+     * Pass the float array into the C code in order to convert to F. Works for arrays of any size.
+     * @param cDegrees An array of celsius temperature values in floats.
+     * @return An array of fahrenheit temperature values in floats.
+     */
     public native float[] convertCToF(float[] cDegrees);
 
     public static void main(String args[]) {

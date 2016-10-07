@@ -9,8 +9,8 @@ import java.util.Random;
  */
 
 public class TemperatureGenerator {
-    private ArrayList<Float> temperaturesF;
     private ArrayList<Float> temperaturesC;
+    private ArrayList<Float> temperaturesF;
     private JNITempConverter tempConverter;
 
 

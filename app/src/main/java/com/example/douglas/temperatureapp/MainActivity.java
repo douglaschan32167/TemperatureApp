@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         this.sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         this.ambientTempSensor = sensorManager.getDefaultSensor(Sensor.TYPE_TEMPERATURE);
         this.degreeType = "C";
+        this.ambientTemp = 0.0f;
 
         setContentView(R.layout.activity_main);
         this.tempGen = new TemperatureGenerator();
@@ -56,6 +57,9 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         this.sensorManager.unregisterListener(this);
     }
 
+    /**
+     * Update the textviews to display the temperatures. Will be called on startup and when a F-C toggle happens
+     */
     private void showTemperatures(){
         List<Float> temps;
         if (this.degreeType.equals("C")) {
@@ -107,6 +111,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
     }
 
+    /**
+     * Update the ambient temperature display at the top when the sensor's value changes.
+     * @param event
+     */
     public void onSensorChanged(SensorEvent event) {
         this.ambientTemp = event.values[0];
 
