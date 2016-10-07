@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
         this.sensorManager = (SensorManager)getSystemService(SENSOR_SERVICE);
         this.ambientTempSensor = sensorManager.getDefaultSensor(Sensor.TYPE_TEMPERATURE);
-        this.degreeType = "Celsius";
+        this.degreeType = "C";
 
         setContentView(R.layout.activity_main);
         this.tempGen = new TemperatureGenerator();
@@ -58,12 +58,12 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
 
     private void showTemperatures(){
         List<Float> temps;
-        if (this.degreeType.equals("Celsius")) {
+        if (this.degreeType.equals("C")) {
             temps = this.tempGen.getTemperaturesC();
-            this.toggleDegreesButton.setText("Show in Fahrenheit");
+            this.toggleDegreesButton.setText("F -> C");
         } else {
             temps = this.tempGen.getTemperaturesF();
-            this.toggleDegreesButton.setText("Show in Celsius");
+            this.toggleDegreesButton.setText("C -> F");
         }
 
 
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         this.fridayDegrees.setText(String.format("%6.1f", temps.get(4)));
         this.degreesTypeView.setText((char) 0x00B0  + this.degreeType);
 
-        String ambientTempInfo = String.format("%6.1f", getAmbientTemp()) + (char) 0x00B0  + this.degreeType;
+        String ambientTempInfo = String.format("%3.1f", getAmbientTemp()) + (char) 0x00B0  + this.degreeType;
         this.ambientTempView.setText(ambientTempInfo);
     }
 
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
      * @return The ambient temperature in whichever degree type is selected.
      */
     public Float getAmbientTemp() {
-        if (this.degreeType.equals("Celsius")) {
+        if (this.degreeType.equals("C")) {
             return this.ambientTemp;
         } else {
             return this.tempGen.convertTemperatureCToF(this.ambientTemp);
@@ -96,10 +96,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
      * @param view
      */
     public void toggleTemperatureTypes(View view) {
-        if (this.degreeType.equals("Celsius")) {
-            this.degreeType = "Fahrenheit";
+        if (this.degreeType.equals("C")) {
+            this.degreeType = "F";
         } else {
-            this.degreeType = "Celsius";
+            this.degreeType = "C";
         }
         showTemperatures();
     }
@@ -110,7 +110,7 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     public void onSensorChanged(SensorEvent event) {
         this.ambientTemp = event.values[0];
 
-        String ambientTempInfo = String.format("%6.1f", getAmbientTemp()) + (char) 0x00B0  + this.degreeType;
+        String ambientTempInfo = String.format("%3.1f", getAmbientTemp()) + (char) 0x00B0  + this.degreeType;
         this.ambientTempView.setText(ambientTempInfo);
 
     }
