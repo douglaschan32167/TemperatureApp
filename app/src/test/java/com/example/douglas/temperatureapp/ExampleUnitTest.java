@@ -26,4 +26,10 @@ public class ExampleUnitTest {
         }
 
     }
+
+    @Test
+    public void testTempGeneration() throws Exception {
+        TemperatureGenerator tempGen = new TemperatureGenerator();
+        assertEquals(tempGen.getTemperaturesC().size(), 5);
+    }
 }

@@ -53,6 +53,7 @@ public class TemperatureGenerator {
 
     /**
      *Accessor function for celsius temperatures.
+     * @return a list of the temperatures in Celsius in order Monday-Friday
      */
     public List<Float> getTemperaturesC() {
         return this.temperaturesC;
@@ -60,6 +61,7 @@ public class TemperatureGenerator {
 
     /**
      *Accessor function for fahrenheit temperatures.
+     * @return a list of the temperatures in Fahrenheit in order Monday-Friday
      */
     public List<Float> getTemperaturesF() {
         return this.temperaturesF;

@@ -1,5 +1,6 @@
 //
-// Created by douglas on 10/5/16.
+// Created by douglas on 10/5/16. Takes in an array of floats and converts them from celsius to fahrenheit.
+// This code was based off of code found here https://www3.ntu.edu.sg/home/ehchua/programming/java/JavaNativeInterface.html
 //
 
 #include <jni.h>
