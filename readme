@@ -5,9 +5,7 @@ This is my submission for the temperature application coding challenge.
 Note that if you run the emulator and play around with the ambient temperature sensor, then the displayed
 temperature will change with it.
 
-The temperature conversion is done with native C code which is found in the cpp directory. I did have a little
-bit of trouble with the .so files generated on my computer. Running ndk-build should be able to re-generate
-them. My computer was being somewhat uncooperative, so I ended up using the .so in the app/src/main/jniLibs/test
+The temperature conversion is done with native C code which is found in the cpp directory. I did have a littlebit of trouble with the .so files generated on my computer. Running ndk-build should be able to re-generate them. My computer was being somewhat uncooperative, so I ended up using the .so in the app/src/main/jniLibs/test
 directory, which I compiled with gcc. Given time constraints and the fact that I can generate .so files with
 ndk-build, I thought it would be better to just use the .so I knew worked instead of figuring out the intricacies
 of why the other ones weren't working on my computer. I know the code works though because I was able to generate
@@ -18,3 +16,5 @@ The button at the bottom of the display will toggle the display from Fahrenheit 
 for the days are randomly generated.
 
 The code can be found on github.com/douglaschan32167/TemperatureApp.
+
+Known bugs: the ambient temperature is initialized at 0.0 C until a change in the sensor is detected. I haven't figured out how to get it to poll the sensor on demand rather than just on a change yet.
